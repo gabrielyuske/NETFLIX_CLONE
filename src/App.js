@@ -56,6 +56,18 @@ export default() => {
           <MovieRow key={key} title={item.title} items={item.items}/>
         ))}
       </section>
+      <footer>
+        Feito com <span role="img" aria-label="coracao">💚</span> por chameleon
+        Direitos de image para Netflix<br/>
+        Dados pegos do site Themoviedb.org
+      </footer>
+
+      {movieList.length <= 0 && 
+        <div className="loading">
+          {<img src="https://images.says.com/uploads/story_source/source_image/599933/19bb.gif" alt="Carregando"/>}
+        </div>
+      }
+      
     </div>
   );
 }
